@@ -39,5 +39,6 @@ CMD ["node", "/app/index.js"]
 启动：
 
 ```bash
+$ docker build -t screenshot .
 $ docker run -it --rm --cap-add=SYS_ADMIN -v /Users/MookCake/:/app/images screenshot
 ```
