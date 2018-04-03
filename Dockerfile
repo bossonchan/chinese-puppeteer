@@ -9,10 +9,10 @@ RUN apt-get update && apt-get install -yq libgconf-2-4
 # Note: this installs the necessary libs to make the bundled version of Chromium that Puppeteer
 # installs, work.
 RUN set -x \
-        && echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" >/etc/apt/sources.list \
-        && echo "deb http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list \
-        && echo "deb-src http://mirrors.163.com/debian/ jessie main non-free contrib" >>/etc/apt/sources.list \
-        && echo "deb-src http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list \
+        # && echo "deb http://mirrors.163.com/debian/ jessie main non-free contrib" >/etc/apt/sources.list \
+        # && echo "deb http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list \
+        # && echo "deb-src http://mirrors.163.com/debian/ jessie main non-free contrib" >>/etc/apt/sources.list \
+        # && echo "deb-src http://mirrors.163.com/debian/ jessie-proposed-updates main non-free contrib" >>/etc/apt/sources.list \
     && apt-get update && apt-get install -y wget --no-install-recommends \
     && apt-key add linux_signing_key.pub \
     # && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
