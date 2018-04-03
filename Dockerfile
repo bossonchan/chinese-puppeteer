@@ -1,7 +1,5 @@
 FROM node:8
 
-FROM node:8-slim
-
 COPY ./linux_signing_key.pub .
 
 # See https://crbug.com/795759
